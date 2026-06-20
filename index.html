@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levino Cheat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0d0d0d;
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(20, 20, 20, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 55px 45px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #ffffff;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-bottom: 4px;
+        }
+
+        .sub {
+            color: #888;
+            font-size: 12px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .desc {
+            font-size: 14px;
+            color: #b0b0b0;
+            line-height: 1.9;
+            margin: 22px 0 28px;
+            font-weight: 300;
+            letter-spacing: 0.2px;
+        }
+
+        .desc .highlight {
+            color: #c7b18f;
+            font-weight: 500;
+            text-shadow: 0 0 20px rgba(199, 177, 143, 0.15);
+        }
+
+        .btn {
+            width: 100%;
+            background: #c7b18f;
+            color: #0d0d0d;
+            border: none;
+            padding: 17px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-family: inherit;
+        }
+
+        .btn:hover {
+            background: #d9c5a8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(199, 177, 143, 0.15);
+        }
+
+        .btn:active {
+            transform: scale(0.98) translateY(0);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .ver {
+            font-size: 11px;
+            color: #555;
+            margin-top: 14px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 32px 22px;
+            }
+            h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LEVINO CHEAT</h1>
+        <div class="sub">Roblox Exploit</div>
+
+        <div class="desc">
+            <span class="highlight">Levino Cheat</span> is an external cheat for 
+            <span class="highlight">Roblox</span> that can be used in any game, with features like 
+            <span class="highlight">aimbot</span>, <span class="highlight">visual effects</span>, and much more. 
+            Make your gameplay more <span class="highlight">fun</span> — and stay 
+            <span class="highlight">undetected</span> with regular updates 
+            for the latest <span class="highlight">Roblox</span> version.
+        </div>
+
+        <button class="btn" id="downloadBtn">Download</button>
+        <div class="ver">Updated 19.06.2026</div>
+    </div>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const original = this.innerHTML;
+            this.innerHTML = 'Downloading...';
+            this.disabled = true;
+
+            const link = document.createElement('a');
+            link.href = 'https://github.com/levinooo/levino-cheat.zip';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            setTimeout(() => {
+                this.innerHTML = original;
+                this.disabled = false;
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
